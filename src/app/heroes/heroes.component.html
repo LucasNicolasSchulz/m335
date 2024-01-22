@@ -1,0 +1,19 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li
+    *ngFor="let hero of heroes"
+    [ngClass]="{ 'hero-item': true }"
+    (click)="onSelect(hero)"
+  >
+    <button
+      type="button"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)"
+    >
+      <span class="badge">{{ hero.id }} {{ hero.name }}</span>
+      <span *ngIf="hero.superpower">💥</span>
+    </button>
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

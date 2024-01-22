@@ -1,0 +1,29 @@
+$hover: #00ffcc;
+$hover2: #ff87ef;
+$button: #97f344;
+$button2: #00fff1;
+$selectedH: #9b765d;
+
+.hero-item {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
+  &:hover {
+    background-color: $hover;
+    color: $hover2;
+
+    button {
+      background-color: $button;
+      color: $button2;
+    }
+  }
+
+  button {
+    // Initial styles for buttons, if needed
+    &.selected {
+      background-color: $selectedH; // Apply the selected styles
+      // Add other styles for the selected state if needed
+    }
+  }
+}
